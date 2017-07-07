@@ -1,0 +1,172 @@
+@import "_vars"
+
+*
+  font-family: "Geometria", sans-serif
+  margin: 0
+
+.container
+  margin: 0 auto
+  width: 1170px
+
+header
+  position: relative
+
+  .extra-element
+    position: absolute
+    bottom: 0px
+
+    &#extra1
+      width: 100%
+    
+    &#extra2
+      width: 40%
+
+  &.main-header
+    height: 100vh
+    background:
+      image: url(../assets/mainheader_bg.png)
+      size: cover
+      position: center top
+
+  .logo-wrap
+    max-width: 502px
+
+    .logo
+      width: 100%
+
+  nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 10px
+
+    a
+      &.main-link
+        display: block
+        width: 20%
+        text-align: center
+
+        letter-spacing: 0.2em
+        color: $text-color-light
+        font:
+          size: 16px
+          variant: small-caps
+          //weight: bold
+
+  div
+
+    &.slogan
+      padding-top: 10%
+      max-width: 50%
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      
+      h1
+        text-transform: uppercase
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 64px
+
+      span
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 26px
+          variant: small-caps
+
+section
+
+  .container
+    padding-top: 5%
+    padding-bottom: 10%
+    overflow-x: hidden
+
+    h2
+      text-align: center
+      color: $text-color-dark
+
+    p.section-quote
+      text-align: center
+      color: $text-color-semidark
+
+    .portfolio-slide
+      margin-top: 5%
+      display: flex
+      position: relative
+      width: 200%
+      height: auto
+      left: 0
+      transition: all .4s ease-in-out
+
+      &:after
+        content: ""
+        display: block
+        clear: both
+
+    .portfolio-container
+      width: 50%
+
+      .img-unit
+        float: left
+        display: block
+        overflow: hidden
+        position: relative
+        background-size: cover
+        width: 33%
+        padding-top: 20%
+        cursor: pointer
+
+        .img-overlay
+          background-color: fade-out($fade-color, 0.5)
+          position: absolute
+          height: 100%
+          width: 100%
+          top: 0
+          opacity: 0
+          display: flex
+          align-items: center
+          justify-content: center
+          text-align: center
+          transition: opacity .1s linear
+          
+          p
+            margin: auto 0
+            color: $text-color-light
+            font:
+              size: 24px
+              weight: bold
+              variant: small-caps
+
+        &:hover .img-overlay
+          opacity: 1
+
+    .spec-container
+      width: 50%
+      display: flex
+      align-items: center
+      justify-content: space-around
+
+      .img-spec
+        max-width: 50%
+
+      .spec-wrap
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+        width: 40%
+
+        h3
+          text-align: center
+          color: $text-color-dark
+
+        p
+          margin-top: 5%
+          color: $text-color-semidark
+          text-indent: 36px
+          line-height: 1.2
+
+      

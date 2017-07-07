@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Geometria";
+  src: url(./fonts/Geometria-Light.otf); }
+
+* {
+  font-family: "Geometria", sans-serif;
+  margin: 0; }
+
+.container {
+  margin: 0 auto;
+  width: 1170px; }
+
+header {
+  position: relative; }
+  header .extra-element {
+    position: absolute;
+    bottom: 0px; }
+    header .extra-element#extra1 {
+      width: 100%; }
+    header .extra-element#extra2 {
+      width: 40%; }
+  header.main-header {
+    height: 100vh;
+    background-image: url(../assets/mainheader_bg.png);
+    background-size: cover;
+    background-position: center top; }
+  header .logo-wrap {
+    max-width: 502px; }
+    header .logo-wrap .logo {
+      width: 100%; }
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px; }
+    header nav a.main-link {
+      display: block;
+      width: 20%;
+      text-align: center;
+      letter-spacing: 0.2em;
+      color: #fdfdfd;
+      font-size: 16px;
+      font-variant: small-caps; }
+  header div.slogan {
+    padding-top: 10%;
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    header div.slogan h1 {
+      text-transform: uppercase;
+      color: #fdfdfd;
+      align-self: flex-end;
+      font-size: 64px; }
+    header div.slogan span {
+      color: #fdfdfd;
+      align-self: flex-end;
+      font-size: 26px;
+      font-variant: small-caps; }
+
+section .container {
+  padding-top: 5%;
+  padding-bottom: 10%;
+  overflow-x: hidden; }
+  section .container h2 {
+    text-align: center;
+    color: #4f4f4f; }
+  section .container p.section-quote {
+    text-align: center;
+    color: #929292; }
+  section .container .portfolio-slide {
+    margin-top: 5%;
+    display: flex;
+    position: relative;
+    width: 200%;
+    height: auto;
+    left: 0;
+    transition: all .4s ease-in-out; }
+    section .container .portfolio-slide:after {
+      content: "";
+      display: block;
+      clear: both; }
+  section .container .portfolio-container {
+    width: 50%; }
+    section .container .portfolio-container .img-unit {
+      float: left;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      width: 33%;
+      padding-top: 20%;
+      cursor: pointer; }
+      section .container .portfolio-container .img-unit .img-overlay {
+        background-color: rgba(79, 79, 79, 0.5);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: opacity .1s linear; }
+        section .container .portfolio-container .img-unit .img-overlay p {
+          margin: auto 0;
+          color: #fdfdfd;
+          font-size: 24px;
+          font-weight: bold;
+          font-variant: small-caps; }
+      section .container .portfolio-container .img-unit:hover .img-overlay {
+        opacity: 1; }
+  section .container .spec-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    section .container .spec-container .img-spec {
+      max-width: 50%; }
+    section .container .spec-container .spec-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 40%; }
+      section .container .spec-container .spec-wrap h3 {
+        text-align: center;
+        color: #4f4f4f; }
+      section .container .spec-container .spec-wrap p {
+        margin-top: 5%;
+        color: #929292;
+        text-indent: 36px;
+        line-height: 1.2; }

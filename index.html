@@ -5,21 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SelfLaboratory</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Common styling -->
-    <link href="style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-3 col-sm-offset-1 col-lg-offset-0">
-          <div class="col-lg-1">1</div>
-          <div class="col-lg-11">2</div>
+    <div class="page">
+
+      <header class="main-header">
+        <img class="extra-element" id="extra1" src="./assets/extra-element1.png">
+        <img class="extra-element" id="extra2" src="./assets/extra-element2.png">
+        <div class="container">
+          <nav>
+            <a class="main-link" href="./">Главная</a>
+            <a class="main-link" href="./about.html">О Нас</a>
+            <a class="logo-wrap" href="./">
+              <img class="logo" src="./assets/selflab_logo.png" alt="SelfLaboratory logo">
+            </a>
+            <a class="main-link" href="./portfolio.html">Портфолио</a>
+            <a class="main-link" href="./services.html">Услуги</a>
+          </nav>
+          <div class="slogan">
+            <h1>Стильная<br>ФотоГрафика</h1>
+            <span>вдохновляясь моментом</span>
+          </div>
         </div>
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4"></div>  
-      </div>
+      </header>
+
+      <section>
+        <div class="container">
+          <h2>
+            Наши работы
+          </h2>
+          <p class="section-quote">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a tortor odio.<br>Maecenas risus magna, sodales sed mi urna.
+          </p>
+          <div class="portfolio-slide">
+            <div class="portfolio-container">
+
+              <a class="img-unit" style="background-image: url('./assets/portfolio-img(1).jpg')">
+                <div class="img-overlay">
+                  <p>Lorem ipsum dolor 1</p>
+                </div>
+              </a> 
+
+              <a class="img-unit" style="background-image: url('./assets/portfolio-img(2).jpg')">
+                <div class="img-overlay">
+                  <p>Lorem ipsum dolor 2</p>
+                </div>
+              </a> 
+
+              <a class="img-unit" style="background-image: url('./assets/portfolio-img(3).jpg')">
+                <div class="img-overlay">
+                  <p>Lorem ipsum dolor 3</p>
+                </div>
+              </a> 
+
+              <a class="img-unit" style="background-image: url('./assets/portfolio-img(4).jpg')">
+                <div class="img-overlay">
+                  <p>Lorem ipsum dolor 4</p>
+                </div>
+              </a> 
+
+              <a class="img-unit" style="background-image: url('./assets/portfolio-img(5).jpg')">
+                <div class="img-overlay">
+                  <p>Lorem ipsum dolor 5</p>
+                </div>
+              </a> 
+
+              <a class="img-unit" style="background-image: url('./assets/portfolio-img(6).jpg')">
+                <div class="img-overlay">
+                  <p>Lorem ipsum dolor 6</p>
+                </div>
+              </a> 
+
+            </div>
+            <div class="spec-container">
+              <a class="back-arrow">
+                <img src="./assets/arrow-left.png">
+              </a>
+              <img class="img-spec" src="" alt="Image spec">
+              <div class="spec-wrap">
+                <h3 class="spec-title">
+                  Lorem ipsum
+                </h3>
+                <p class="spec-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla metus nisi, pretium vel risus nec, eleifend ullamcorper felis. Integer vulputate tellus est, et sagittis justo ornare eu. Nunc id arcu tempor lorem volutpat placerat. Phasellus sed pharetra nunc, ac ultricies nisl. Aenean libero mi, cursus ut nunc nec, dapibus dictum purus. Nulla fringilla nec ligula et placerat. Suspendisse id quam mauris. Vestibulum a porta erat. Pellentesque imperdiet urna sit amet molestie vulputate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section></section>
+      <section></section>
+      <footer></footer>
     </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
