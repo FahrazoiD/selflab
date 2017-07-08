@@ -24,10 +24,64 @@ header
     &#extra2
       transform: scale(.3, .3)
   
+  &.services-header
+    min-height: 600px
+    background:
+      image: url(../assets/servicesheader_bg-min.png)
+      size: cover
+      position: center center
+
+    nav
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 10px
+
+      .logo-wrap
+        max-width: 502px
+
+        .logo
+          width: 100%
+
+      a
+        &.main-link
+          display: block
+          width: 20%
+          text-align: center
+
+          color: $text-color-light
+          font:
+            size: 16px
+            weight: bolder
+            variant: small-caps
+    
+    .slogan
+      padding-top: 10%
+      max-width: 50%
+      height: 100%
+      margin-left: 10%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      
+      h1
+        text-transform: uppercase
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 64px
+
+      span
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 26px
+          variant: small-caps
+
   &.about-header
     min-height: 600px
     background:
-      image: url(../assets/aboutheader_bg.png)
+      image: url(../assets/aboutheader_bg-min.png)
       size: cover
       position: center top
 
@@ -83,7 +137,7 @@ header
     height: 100vh
     min-height: 940px
     background:
-      image: url(../assets/mainheader_bg.png)
+      image: url(../assets/mainheader_bg-min.png)
       size: cover
       position: center top
 
@@ -143,6 +197,12 @@ section
     text-align: center
     color: $text-color-semidark
   
+  &.services-section
+    .container
+      padding-top: 5%
+      padding-bottom: 12%
+      overflow-x: hidden
+
   &.team-section
     .container
       padding-top: 5%

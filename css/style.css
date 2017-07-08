@@ -37,9 +37,49 @@ header {
       transform: scale(1, 0.15); }
     header .extra-element#extra2 {
       transform: scale(0.3, 0.3); }
+  header.services-header {
+    min-height: 600px;
+    background-image: url(../assets/servicesheader_bg-min.png);
+    background-size: cover;
+    background-position: center center; }
+    header.services-header nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px; }
+      header.services-header nav .logo-wrap {
+        max-width: 502px; }
+        header.services-header nav .logo-wrap .logo {
+          width: 100%; }
+      header.services-header nav a.main-link {
+        display: block;
+        width: 20%;
+        text-align: center;
+        color: #fdfdfd;
+        font-size: 16px;
+        font-weight: bolder;
+        font-variant: small-caps; }
+    header.services-header .slogan {
+      padding-top: 10%;
+      max-width: 50%;
+      height: 100%;
+      margin-left: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      header.services-header .slogan h1 {
+        text-transform: uppercase;
+        color: #fdfdfd;
+        align-self: flex-end;
+        font-size: 64px; }
+      header.services-header .slogan span {
+        color: #fdfdfd;
+        align-self: flex-end;
+        font-size: 26px;
+        font-variant: small-caps; }
   header.about-header {
     min-height: 600px;
-    background-image: url(../assets/aboutheader_bg.png);
+    background-image: url(../assets/aboutheader_bg-min.png);
     background-size: cover;
     background-position: center top; }
     header.about-header nav {
@@ -80,7 +120,7 @@ header {
   header.main-header {
     height: 100vh;
     min-height: 940px;
-    background-image: url(../assets/mainheader_bg.png);
+    background-image: url(../assets/mainheader_bg-min.png);
     background-size: cover;
     background-position: center top; }
     header.main-header nav {
@@ -126,6 +166,11 @@ section h2 {
 section p.section-quote {
   text-align: center;
   color: #929292; }
+
+section.services-section .container {
+  padding-top: 5%;
+  padding-bottom: 12%;
+  overflow-x: hidden; }
 
 section.team-section .container {
   padding-top: 5%;
