@@ -135,9 +135,12 @@ section.team-section .container {
     margin: 5% auto;
     color: #4f4f4f;
     text-align: justify;
-    font-size: 18px; }
+    font-size: 18px;
+    text-indent: 20px; }
 
 section.team-section .person {
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   justify-content: space-around;
   margin-top: 5%; }
