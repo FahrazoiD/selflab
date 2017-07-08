@@ -171,6 +171,9 @@ section.services-section .container {
   padding-top: 5%;
   padding-bottom: 12%;
   overflow-x: hidden; }
+  section.services-section .container .service-wrap {
+    display: flex;
+    justify-content: space-around; }
 
 section.team-section .container {
   padding-top: 5%;
