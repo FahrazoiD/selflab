@@ -30,60 +30,152 @@ header {
   position: relative; }
   header .extra-element {
     position: absolute;
-    bottom: 0px; }
+    display: block;
+    bottom: 0px;
+    transform-origin: bottom left; }
     header .extra-element#extra1 {
-      width: 100%; }
+      transform: scale(1, 0.15); }
     header .extra-element#extra2 {
-      width: 40%; }
+      transform: scale(0.3, 0.3); }
+  header.about-header {
+    min-height: 600px;
+    background-image: url(../assets/aboutheader_bg.png);
+    background-size: cover;
+    background-position: center top; }
+    header.about-header nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px; }
+      header.about-header nav .logo-wrap {
+        max-width: 502px; }
+        header.about-header nav .logo-wrap .logo {
+          width: 100%; }
+      header.about-header nav a.main-link {
+        display: block;
+        width: 20%;
+        text-align: center;
+        color: #fdfdfd;
+        font-size: 16px;
+        font-weight: bolder;
+        font-variant: small-caps; }
+    header.about-header .slogan {
+      padding-top: 10%;
+      max-width: 50%;
+      height: 100%;
+      margin-left: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      header.about-header .slogan h1 {
+        text-transform: uppercase;
+        color: #fdfdfd;
+        align-self: flex-end;
+        font-size: 64px; }
+      header.about-header .slogan span {
+        color: #fdfdfd;
+        align-self: flex-end;
+        font-size: 26px;
+        font-variant: small-caps; }
   header.main-header {
     height: 100vh;
+    min-height: 940px;
     background-image: url(../assets/mainheader_bg.png);
     background-size: cover;
     background-position: center top; }
-  header .logo-wrap {
-    max-width: 502px; }
-    header .logo-wrap .logo {
-      width: 100%; }
-  header nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px; }
-    header nav a.main-link {
-      display: block;
-      width: 20%;
-      text-align: center;
-      color: #fdfdfd;
-      font-size: 16px;
-      font-variant: small-caps; }
-  header div.slogan {
-    padding-top: 10%;
-    max-width: 50%;
-    height: 100%;
+    header.main-header nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px; }
+      header.main-header nav .logo-wrap {
+        max-width: 502px; }
+        header.main-header nav .logo-wrap .logo {
+          width: 100%; }
+      header.main-header nav a.main-link {
+        display: block;
+        width: 20%;
+        text-align: center;
+        letter-spacing: .5px;
+        color: #fdfdfd;
+        font-size: 16px;
+        font-weight: bolder;
+        font-variant: small-caps; }
+    header.main-header .slogan {
+      padding-top: 10%;
+      max-width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      header.main-header .slogan h1 {
+        text-transform: uppercase;
+        color: #fdfdfd;
+        align-self: flex-end;
+        font-size: 64px; }
+      header.main-header .slogan span {
+        color: #fdfdfd;
+        align-self: flex-end;
+        font-size: 26px;
+        font-variant: small-caps; }
+
+section h2 {
+  text-align: center;
+  color: #4f4f4f; }
+
+section p.section-quote {
+  text-align: center;
+  color: #929292; }
+
+section.team-section .container {
+  padding-top: 5%;
+  padding-bottom: 12%;
+  overflow-x: hidden; }
+  section.team-section .container p.section-intro {
+    margin: 5% auto;
+    color: #4f4f4f;
+    text-align: justify;
+    font-size: 18px; }
+
+section.team-section .person {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%; }
+  section.team-section .person .person-img {
+    display: block; }
+  section.team-section .person .person-info {
+    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; }
-    header div.slogan h1 {
+    justify-content: center;
+    align-items: center; }
+    section.team-section .person .person-info .person-name {
+      color: #4f4f4f;
       text-transform: uppercase;
-      color: #fdfdfd;
-      align-self: flex-end;
-      font-size: 64px; }
-    header div.slogan span {
-      color: #fdfdfd;
-      align-self: flex-end;
-      font-size: 26px;
-      font-variant: small-caps; }
+      font-family: serif; }
+    section.team-section .person .person-info .person-status {
+      color: #c14e27;
+      text-transform: uppercase;
+      font-family: serif; }
+    section.team-section .person .person-info .person-quote {
+      text-align: justify;
+      color: #4f4f4f;
+      text-indent: 20px;
+      font-style: italic;
+      font-size: 18px; }
+  section.team-section .person-right .person-img {
+    order: 2; }
+  section.team-section .person-right .person-info {
+    order: 1; }
+  section.team-section .person-left .person-img {
+    order: 1; }
+  section.team-section .person-left .person-info {
+    order: 2; }
 
 section.portfolio-section .container {
   padding-top: 5%;
   padding-bottom: 12%;
   overflow-x: hidden; }
-  section.portfolio-section .container h2 {
-    text-align: center;
-    color: #4f4f4f; }
-  section.portfolio-section .container p.section-quote {
-    text-align: center;
-    color: #929292; }
   section.portfolio-section .container .portfolio-slide {
     margin-top: 5%;
     display: flex;

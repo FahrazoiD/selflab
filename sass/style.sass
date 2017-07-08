@@ -14,48 +14,105 @@ header
 
   .extra-element
     position: absolute
+    display: block
     bottom: 0px
+    transform-origin: bottom left
 
     &#extra1
-      width: 100%
-    
+      transform: scale(1, .15)
+
     &#extra2
-      width: 40%
+      transform: scale(.3, .3)
+  
+  &.about-header
+    min-height: 600px
+    background:
+      image: url(../assets/aboutheader_bg.png)
+      size: cover
+      position: center top
+
+    nav
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 10px
+
+      .logo-wrap
+        max-width: 502px
+
+        .logo
+          width: 100%
+
+      a
+        &.main-link
+          display: block
+          width: 20%
+          text-align: center
+
+          color: $text-color-light
+          font:
+            size: 16px
+            weight: bolder
+            variant: small-caps
+    
+    .slogan
+      padding-top: 10%
+      max-width: 50%
+      height: 100%
+      margin-left: 30%
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      
+      h1
+        text-transform: uppercase
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 64px
+
+      span
+        color: $text-color-light
+        align-self: flex-end
+        font:
+          size: 26px
+          variant: small-caps
+
 
   &.main-header
     height: 100vh
+    min-height: 940px
     background:
       image: url(../assets/mainheader_bg.png)
       size: cover
       position: center top
 
-  .logo-wrap
-    max-width: 502px
+    nav
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 10px
 
-    .logo
-      width: 100%
+      .logo-wrap
+        max-width: 502px
 
-  nav
-    display: flex
-    justify-content: space-around
-    align-items: center
-    padding: 10px
+        .logo
+          width: 100%
 
-    a
-      &.main-link
-        display: block
-        width: 20%
-        text-align: center
+      a
+        &.main-link
+          display: block
+          width: 20%
+          text-align: center
+          letter-spacing: .5px
 
-        color: $text-color-light
-        font:
-          size: 16px
-          variant: small-caps
-          //weight: bold
+          color: $text-color-light
+          font:
+            size: 16px
+            weight: bolder
+            variant: small-caps
 
-  div
-
-    &.slogan
+    .slogan
       padding-top: 10%
       max-width: 50%
       height: 100%
@@ -78,19 +135,79 @@ header
           variant: small-caps
 
 section
-  &.portfolio-section
+  h2
+    text-align: center
+    color: $text-color-dark
+
+  p.section-quote
+    text-align: center
+    color: $text-color-semidark
+  
+  &.team-section
     .container
       padding-top: 5%
       padding-bottom: 12%
       overflow-x: hidden
 
-      h2
-        text-align: center
+      p.section-intro
+        margin: 5% auto
         color: $text-color-dark
+        text-align: justify
+        font-size: 18px
 
-      p.section-quote
-        text-align: center
-        color: $text-color-semidark
+    .person
+      display: flex
+      justify-content: space-around
+      margin-top: 5%
+
+      .person-img
+        display: block
+
+      
+      .person-info
+        width: 60%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        .person-name
+          color: $text-color-dark
+          text-transform: uppercase
+          font-family: serif
+
+        .person-status
+          color: $text-color-accent
+          text-transform: uppercase
+          font-family: serif
+
+        .person-quote
+          text-align: justify
+          color: $text-color-dark
+          text-indent: 20px
+          font:
+            style: italic
+            size: 18px
+
+      &-right
+        .person-img
+          order: 2
+
+        .person-info
+          order: 1
+
+      &-left
+        .person-img
+          order: 1
+
+        .person-info
+          order: 2
+
+  &.portfolio-section
+    .container
+      padding-top: 5%
+      padding-bottom: 12%
+      overflow-x: hidden
 
       .portfolio-slide
         margin-top: 5%
@@ -148,7 +265,7 @@ section
         display: flex
         align-items: center
         justify-content: space-around
-
+        
         .img-spec
           max-width: 50%
 
