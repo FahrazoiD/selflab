@@ -343,10 +343,10 @@ section.dates-section {
         text-align: center; }
 
 footer {
-  min-height: 458px;
+  min-height: 400px;
   background-color: #4f4f4f; }
   footer .container {
-    padding-top: 5%;
+    padding-top: 4%;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -354,12 +354,14 @@ footer {
       text-align: center;
       color: #fdfdfd; }
     footer .container .contact-wrap {
-      margin-top: 5%;
+      margin-top: 4%;
       width: 70%;
       display: flex;
       justify-content: space-around; }
       footer .container .contact-wrap .contacts {
-        width: 40%; }
+        width: 80%;
+        display: flex;
+        justify-content: space-around; }
         footer .container .contact-wrap .contacts .contact-title {
           color: #d47555; }
         footer .container .contact-wrap .contacts .contact-info {
@@ -367,7 +369,8 @@ footer {
           line-height: 1.5em;
           font-style: italic; }
       footer .container .contact-wrap .contact-form {
-        width: 40%; }
+        width: 40%;
+        display: none; }
         footer .container .contact-wrap .contact-form #msgform {
           width: 100%;
           height: 100%;
@@ -397,7 +400,7 @@ footer {
               font-style: normal; }
   footer .social-wrap {
     width: 15%;
-    padding: 5%;
+    padding: 4%;
     display: flex;
     justify-content: space-around;
     align-items: center; }
