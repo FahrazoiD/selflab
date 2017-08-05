@@ -205,8 +205,52 @@ section
       overflow-x: hidden
 
       .service-wrap
+        margin-top: 100px
         display: flex
-        justify-content: space-around
+        justify-content: space-between
+
+        .service
+          max-width: 30%
+          padding: 20px
+          box-sizing: border-box
+          border:
+            top: solid 2px #9E9E9E
+            bottom: solid 2px #9E9E9E
+
+          .price
+            text-align: center
+            font-size: 1.8em
+            color: #ED4009
+
+          .service-list
+            list-style: none
+
+            li
+              margin: 10px auto
+              text-align: center
+              color: $text-color-semidark
+              width: 90%
+              font-size: .9em
+
+              &:first-child
+                font-size: 1.2em
+                color: $text-color-dark
+                width: 100%
+
+          .service-info
+            font-size: .9em
+
+    .service-extra
+      padding: 10px
+      font-size: .8em
+      color: $text-color-semidark  
+
+    .service-special
+
+      h2
+        margin:
+          top: 50px
+          bottom: 50px    
 
   &.team-section
     .container
@@ -436,86 +480,110 @@ section
           margin-top: 5%
           text-align: center
 
-footer
-  min-height: 400px
-  background-color: $bg-color-dark
 
-  .container
-    padding-top: 4%
-    display: flex
-    flex-direction: column
-    align-items: center
 
-    h2
-      text-align: center
-      color: $text-color-light
 
-    .contact-wrap
-      margin-top: 4% 
-      width: 70%
+  &.feedback-section
+    min-height: 400px
+    background-color: $bg-color-dark
+
+    .container
       display: flex
-      justify-content: space-around
+      flex-direction: column
+      align-items: center
 
-      .contacts
-        width: 80% // this
-        display: flex  // this
-        justify-content: space-around // this
+      h2
+        margin-top: 50px
+        text-align: center
+        color: $text-color-light
 
-        .temp-wrap // this
-          
+      .contact-wrap
+        width: 70%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
 
-        .contact-title
-          color: $text-color-lightaccent
-
-        .contact-info
-          color: $text-color-light
-          line-height: 1.5em
-          font-style: italic
-
-      .contact-form
-        width: 40%
-        display: none // this
-
-        #msgform
+        .contacts
           width: 100%
-          height: 100%
-          display: flex
-          flex-direction: column
-          align-items: center
-          justify-content: space-between
 
-          textarea
-            resize: none
-          
-          input, textarea
+          .contact-title
+            color: $text-color-lightaccent
+
+          .contact-info
+            list-style: none
+            display: flex
+            margin: 50px
+            justify-content: space-around
+            color: $text-color-light
+            line-height: 1.5em
+            font-style: italic
+
+            li
+              display: flex
+              align-items: center
+              font-size: 22px
+
+              i
+                font-size: 36px
+                margin: 5px
+
+        .contact-form
+          width: 100%
+
+          #msgform
             width: 100%
-            display: block
-            border-top: solid 2px $text-color-light
-            border-bottom: solid 2px $text-color-light
-            color: $text-color-semidark
-            font:
-              size: 16px
-              weight: bold
-              style: italic
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
 
-            &[type="submit"]
-              width: 50%
-              padding: 10px
-              border: none
-              background-color: $bg-color-lightaccent
-              color: $text-color-light
+            textarea
+              resize: none
+            
+            input, textarea
+              width: 100%
+              display: block
+              border-bottom: solid 2px $text-color-light
+              margin-top: 20px
+              padiing-top: 10px
+              padding-bottom: 10px
+              color: $text-color-semidark
               font:
                 size: 16px
-                weight: bolder
-                style: normal
+                weight: bold
+                style: italic
 
-  .social-wrap
-    width: 15%
-    padding: 4%
+              &[type="submit"]
+                width: 30%
+                padding: 10px
+                border: none
+                background-color: $bg-color-lightaccent
+                color: $text-color-light
+                font:
+                  size: 16px
+                  weight: bolder
+                  style: normal
+
+footer
+  min-height: 60px
+  background-color: #18191b
+
+  .container
     display: flex
     justify-content: space-around
     align-items: center
 
-    a
+    .copyright
       color: $text-color-light
-      font-size: 24px
+
+    .social-wrap
+      width: 15%
+      padding: 4%
+      display: flex
+      justify-content: space-around
+      align-items: center
+
+      a
+        color: $text-color-light
+        font-size: 24px
