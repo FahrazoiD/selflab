@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  //portflioSlide();
-  //setSpecContent();
+  portflioSlide();
+  setSpecContent();
 });
 
 function portflioSlide() {

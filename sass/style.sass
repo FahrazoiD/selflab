@@ -124,6 +124,7 @@ header
         align-self: flex-end
         font:
           size: 64px
+          weight: 100
 
       span
         color: $text-color-light
@@ -255,71 +256,99 @@ section
   &.team-section
     .container
       padding-top: 5%
-      padding-bottom: 12%
+      max-width: 900px
+      padding-bottom: 100px
       overflow-x: hidden
 
       p.section-intro
         margin: 5% auto
         color: $text-color-dark
         text-align: justify
-        font-size: 18px
+        font-size: 16px
         text-indent: 20px
 
     .person
-      padding-left: 5%
-      padding-right: 5%
       display: flex
+      flex-direction: column
       justify-content: space-around
-      margin-top: 5%
-
-      .person-img
-        display: block
-
+      text-align: center
+      align-content: center
       
+      .person-name
+        color: $text-color-dark
+        //text-transform: uppercase
+        font-family: "Geometria", serif
+
+        &:before
+          content: ""
+          display: block
+          width: 150px
+          height: 2px
+          margin: 40px auto 30px auto
+          background-color: $text-color-fadedaccent
+
+      .person-status
+        color: $text-color-fadedaccent
+        text-transform: uppercase
+        font-family: "Geometria", serif
+        font-size: .7em
+        letter-spacing: .3em
+        margin: 10px
+
       .person-info
-        width: 60%
         display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
+        margin-top: 40px
+        justify-content: space-between
 
-        .person-name
-          color: $text-color-dark
-          text-transform: uppercase
-          font-family: serif
+        &-right
+          .person-img
+            order: 2
 
-        .person-status
-          color: $text-color-accent
-          text-transform: uppercase
-          font-family: serif
+          .person-quotes
+            order: 1
 
-        .person-quote
-          text-align: justify
-          color: $text-color-dark
-          text-indent: 20px
-          font:
-            style: italic
-            size: 18px
+        &-left
+          .person-img
+            order: 1
 
-      &-right
+          .person-quotes
+            order: 2
+
         .person-img
-          order: 2
+          display: block
+          width: 30%
+          height: 50vh
+          min-height: auto
+          max-height: 500px
+          background: 
+            size: cover
 
-        .person-info
-          order: 1
-
-      &-left
-        .person-img
-          order: 1
-
-        .person-info
-          order: 2
+        .person-quotes
+          width: 50%
+          display: flex
+          flex-direction: column
+        
+          .person-quote
+            text-align: justify
+            color: $text-color-semidark
+            text-indent: 20px
+            font:
+              style: italic
+              size: 16px
 
   &.portfolio-section
     .container
       padding-top: 5%
       padding-bottom: 12%
       overflow-x: hidden
+
+      h2::after
+        content: ""
+        display: block
+        width: 100px
+        height: 2px
+        background-color: #F3CFBD
+        margin: 15px auto
 
       .portfolio-slide
         margin-top: 5%

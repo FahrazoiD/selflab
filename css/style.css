@@ -112,7 +112,8 @@ header {
         text-transform: uppercase;
         color: #fdfdfd;
         align-self: flex-end;
-        font-size: 64px; }
+        font-size: 64px;
+        font-weight: 100; }
       header.about-header .slogan span {
         color: #fdfdfd;
         align-self: flex-end;
@@ -213,56 +214,80 @@ section.services-section .service-special h2 {
 
 section.team-section .container {
   padding-top: 5%;
-  padding-bottom: 12%;
+  max-width: 900px;
+  padding-bottom: 100px;
   overflow-x: hidden; }
   section.team-section .container p.section-intro {
     margin: 5% auto;
     color: #4f4f4f;
     text-align: justify;
-    font-size: 18px;
+    font-size: 16px;
     text-indent: 20px; }
 
 section.team-section .person {
-  padding-left: 5%;
-  padding-right: 5%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  margin-top: 5%; }
-  section.team-section .person .person-img {
-    display: block; }
+  text-align: center;
+  align-content: center; }
+  section.team-section .person .person-name {
+    color: #4f4f4f;
+    font-family: "Geometria", serif; }
+    section.team-section .person .person-name:before {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 2px;
+      margin: 40px auto 30px auto;
+      background-color: #F3CFBD; }
+  section.team-section .person .person-status {
+    color: #F3CFBD;
+    text-transform: uppercase;
+    font-family: "Geometria", serif;
+    font-size: .7em;
+    letter-spacing: .3em;
+    margin: 10px; }
   section.team-section .person .person-info {
-    width: 60%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    section.team-section .person .person-info .person-name {
-      color: #4f4f4f;
-      text-transform: uppercase;
-      font-family: serif; }
-    section.team-section .person .person-info .person-status {
-      color: #c14e27;
-      text-transform: uppercase;
-      font-family: serif; }
-    section.team-section .person .person-info .person-quote {
-      text-align: justify;
-      color: #4f4f4f;
-      text-indent: 20px;
-      font-style: italic;
-      font-size: 18px; }
-  section.team-section .person-right .person-img {
-    order: 2; }
-  section.team-section .person-right .person-info {
-    order: 1; }
-  section.team-section .person-left .person-img {
-    order: 1; }
-  section.team-section .person-left .person-info {
-    order: 2; }
+    margin-top: 40px;
+    justify-content: space-between; }
+    section.team-section .person .person-info-right .person-img {
+      order: 2; }
+    section.team-section .person .person-info-right .person-quotes {
+      order: 1; }
+    section.team-section .person .person-info-left .person-img {
+      order: 1; }
+    section.team-section .person .person-info-left .person-quotes {
+      order: 2; }
+    section.team-section .person .person-info .person-img {
+      display: block;
+      width: 30%;
+      height: 50vh;
+      min-height: auto;
+      max-height: 500px;
+      background-size: cover; }
+    section.team-section .person .person-info .person-quotes {
+      width: 50%;
+      display: flex;
+      flex-direction: column; }
+      section.team-section .person .person-info .person-quotes .person-quote {
+        text-align: justify;
+        color: #929292;
+        text-indent: 20px;
+        font-style: italic;
+        font-size: 16px; }
 
 section.portfolio-section .container {
   padding-top: 5%;
   padding-bottom: 12%;
   overflow-x: hidden; }
+  section.portfolio-section .container h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #F3CFBD;
+    margin: 15px auto; }
   section.portfolio-section .container .portfolio-slide {
     margin-top: 5%;
     display: flex;
