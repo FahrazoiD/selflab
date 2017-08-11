@@ -25,10 +25,12 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1170px; }
+  width: 1170px;
+  box-sizing: border-box; }
 
 header {
-  position: relative; }
+  position: relative;
+  z-index: -2; }
   header .extra-element {
     position: absolute;
     display: block;
@@ -79,7 +81,7 @@ header {
         font-size: 26px;
         font-variant: small-caps; }
   header.about-header {
-    min-height: 600px;
+    min-height: 650px;
     background-image: url(../assets/aboutheader_bg-min.png);
     background-size: cover;
     background-position: center top; }
@@ -87,19 +89,23 @@ header {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 10px; }
-      header.about-header nav .logo-wrap {
-        max-width: 502px; }
-        header.about-header nav .logo-wrap .logo {
-          width: 100%; }
+      padding: 15px; }
       header.about-header nav a.main-link {
         display: block;
         width: 20%;
         text-align: center;
+        flex: 1;
         color: #fdfdfd;
         font-size: 16px;
         font-weight: bolder;
         font-variant: small-caps; }
+      header.about-header nav a.logo-wrap {
+        max-width: 500px;
+        flex: 2; }
+        header.about-header nav a.logo-wrap .logo {
+          width: 80%;
+          display: block;
+          margin: 0 auto; }
     header.about-header .slogan {
       padding-top: 10%;
       max-width: 50%;
@@ -107,7 +113,8 @@ header {
       margin-left: 30%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around; }
+      justify-content: space-around;
+      text-shadow: 1px 1px 2px #4f4f4f; }
       header.about-header .slogan h1 {
         text-transform: uppercase;
         color: #fdfdfd;
@@ -117,7 +124,8 @@ header {
       header.about-header .slogan span {
         color: #fdfdfd;
         align-self: flex-end;
-        font-size: 26px;
+        text-align: right;
+        font-size: 18px;
         font-variant: small-caps; }
   header.main-header {
     height: 100vh;
@@ -213,10 +221,9 @@ section.services-section .service-special h2 {
   margin-bottom: 50px; }
 
 section.team-section .container {
-  padding-top: 5%;
-  max-width: 900px;
-  padding-bottom: 100px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding: 20px 150px 40px 150px;
+  z-index: 10; }
   section.team-section .container p.section-intro {
     margin: 5% auto;
     color: #4f4f4f;
@@ -226,20 +233,26 @@ section.team-section .container {
 
 section.team-section .person {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   align-content: center; }
+  section.team-section .person-left::before {
+    transform: matrix(1, -0.05, 0, 1.2, 0, 0); }
+  section.team-section .person-right::before {
+    transform: matrix(1, 0.05, 0, 1.2, 0, 0); }
+  section.team-section .person-left::before, section.team-section .person-right::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: #f8f8f8; }
   section.team-section .person .person-name {
     color: #4f4f4f;
     font-family: "Geometria", serif; }
-    section.team-section .person .person-name:before {
-      content: "";
-      display: block;
-      width: 150px;
-      height: 2px;
-      margin: 40px auto 30px auto;
-      background-color: #F3CFBD; }
   section.team-section .person .person-status {
     color: #F3CFBD;
     text-transform: uppercase;
@@ -247,35 +260,94 @@ section.team-section .person {
     font-size: .7em;
     letter-spacing: .3em;
     margin: 10px; }
+    section.team-section .person .person-status:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 2px;
+      margin: 15px auto 15px auto;
+      background-color: #F3CFBD; }
   section.team-section .person .person-info {
     display: flex;
     margin-top: 40px;
-    justify-content: space-between; }
+    height: 400px;
+    justify-content: space-around; }
     section.team-section .person .person-info-right .person-img {
       order: 2; }
-    section.team-section .person .person-info-right .person-quotes {
+    section.team-section .person .person-info-right .person-text {
       order: 1; }
     section.team-section .person .person-info-left .person-img {
       order: 1; }
-    section.team-section .person .person-info-left .person-quotes {
+    section.team-section .person .person-info-left .person-text {
       order: 2; }
     section.team-section .person .person-info .person-img {
       display: block;
       width: 30%;
-      height: 50vh;
       min-height: auto;
       max-height: 500px;
       background-size: cover; }
-    section.team-section .person .person-info .person-quotes {
+    section.team-section .person .person-info .person-text {
       width: 50%;
       display: flex;
       flex-direction: column; }
-      section.team-section .person .person-info .person-quotes .person-quote {
+      section.team-section .person .person-info .person-text .person-quote {
         text-align: justify;
         color: #929292;
         text-indent: 20px;
         font-style: italic;
         font-size: 16px; }
+
+section.team-section .quote-spacing {
+  height: 600px;
+  background-size: cover;
+  background-position: center left; }
+  section.team-section .quote-spacing .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+  section.team-section .quote-spacing .quote {
+    max-width: 400px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: rgba(108, 108, 108, 0.5); }
+    section.team-section .quote-spacing .quote-left {
+      align-self: flex-start; }
+    section.team-section .quote-spacing .quote-right {
+      align-self: flex-end; }
+    section.team-section .quote-spacing .quote::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 25%;
+      height: 40%;
+      top: 0;
+      left: 0;
+      border-left: solid 10px #343434;
+      border-top: solid 4px #343434; }
+    section.team-section .quote-spacing .quote::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 25%;
+      height: 40%;
+      right: 0;
+      bottom: 0;
+      border-right: solid 10px #343434;
+      border-bottom: solid 4px #343434; }
+    section.team-section .quote-spacing .quote p {
+      color: #fdfdfd;
+      text-align: justify;
+      font-size: 14px;
+      font-style: italic;
+      text-indent: 36px; }
+      section.team-section .quote-spacing .quote p big {
+        font-size: 16px;
+        font-weight: 600;
+        font-style: normal; }
 
 section.portfolio-section .container {
   padding-top: 5%;

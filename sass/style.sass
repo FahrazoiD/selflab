@@ -8,9 +8,11 @@ body
 .container
   margin: 0 auto
   width: 1170px
+  box-sizing: border-box
 
 header
   position: relative
+  z-index: -2
 
   .extra-element
     position: absolute
@@ -79,7 +81,7 @@ header
           variant: small-caps
 
   &.about-header
-    min-height: 600px
+    min-height: 650px
     background:
       image: url(../assets/aboutheader_bg-min.png)
       size: cover
@@ -89,26 +91,32 @@ header
       display: flex
       justify-content: space-around
       align-items: center
-      padding: 10px
+      padding: 15px
 
-      .logo-wrap
-        max-width: 502px
-
-        .logo
-          width: 100%
+      
 
       a
         &.main-link
           display: block
           width: 20%
           text-align: center
+          flex: 1
 
           color: $text-color-light
           font:
             size: 16px
             weight: bolder
             variant: small-caps
-    
+
+        &.logo-wrap
+            max-width: 500px
+            flex: 2
+
+            .logo
+              width: 80%
+              display: block
+              margin: 0 auto
+
     .slogan
       padding-top: 10%
       max-width: 50%
@@ -117,6 +125,7 @@ header
       display: flex
       flex-direction: column
       justify-content: space-around
+      text-shadow: 1px 1px 2px #4f4f4f
       
       h1
         text-transform: uppercase
@@ -129,8 +138,9 @@ header
       span
         color: $text-color-light
         align-self: flex-end
+        text-align: right
         font:
-          size: 26px
+          size: 18px
           variant: small-caps
 
 
@@ -255,10 +265,9 @@ section
 
   &.team-section
     .container
-      padding-top: 5%
-      max-width: 900px
-      padding-bottom: 100px
       overflow-x: hidden
+      padding: 20px 150px 40px 150px
+      z-index: 10
 
       p.section-intro
         margin: 5% auto
@@ -269,23 +278,31 @@ section
 
     .person
       display: flex
+      position: relative
       flex-direction: column
       justify-content: space-around
       text-align: center
       align-content: center
       
-      .person-name
-        color: $text-color-dark
-        //text-transform: uppercase
-        font-family: "Geometria", serif
+      &-left::before
+        transform: matrix(1,-.05,0,1.2,0,0)
+      
+      &-right::before
+        transform: matrix(1,.05,0,1.2,0,0)
 
-        &:before
+      &-left, &-right
+        &::before
           content: ""
           display: block
-          width: 150px
-          height: 2px
-          margin: 40px auto 30px auto
-          background-color: $text-color-fadedaccent
+          position: absolute
+          width: 100%
+          height: 100%
+          z-index: 5
+          background-color: $bg-color-light
+  
+      .person-name
+        color: $text-color-dark
+        font-family: "Geometria", serif
 
       .person-status
         color: $text-color-fadedaccent
@@ -295,35 +312,43 @@ section
         letter-spacing: .3em
         margin: 10px
 
+        &:after
+          content: ""
+          display: block
+          width: 100px
+          height: 2px
+          margin: 15px auto 15px auto
+          background-color: $text-color-fadedaccent
+
       .person-info
         display: flex
         margin-top: 40px
-        justify-content: space-between
+        height: 400px
+        justify-content: space-around
 
         &-right
           .person-img
             order: 2
 
-          .person-quotes
+          .person-text
             order: 1
 
         &-left
           .person-img
             order: 1
 
-          .person-quotes
+          .person-text
             order: 2
 
         .person-img
           display: block
           width: 30%
-          height: 50vh
           min-height: auto
           max-height: 500px
           background: 
             size: cover
 
-        .person-quotes
+        .person-text
           width: 50%
           display: flex
           flex-direction: column
@@ -335,6 +360,70 @@ section
             font:
               style: italic
               size: 16px
+
+    .quote-spacing
+      height: 600px
+      background-size: cover
+      background-position: center left
+
+      .container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+
+      .quote
+        max-width: 400px
+        display: flex
+        position: relative
+        align-items: center
+        justify-content: 
+        padding: 20px 30px
+        box-sizing: border-box
+        background-color: rgba(#6C6C6C, .5)
+
+        &-left
+          align-self: flex-start
+
+        &-right
+          align-self: flex-end
+
+        &::before
+          position: absolute
+          content: ""
+          display: block
+          width: 25%
+          height: 40%
+          top: 0
+          left: 0
+          border:
+            left: solid 10px $darkener-color
+            top: solid 4px $darkener-color
+
+        &::after
+          position: absolute
+          content: ""
+          display: block
+          width: 25%
+          height: 40%
+          right: 0
+          bottom: 0
+          border:
+            right: solid 10px $darkener-color
+            bottom: solid 4px $darkener-color
+
+        p
+          color: $text-color-light
+          text-align: justify
+          font-size: 14px
+          font-style: italic
+          text-indent: 36px
+
+          big
+            font-size: 16px
+            font-weight: 600
+            font-style: normal
+
 
   &.portfolio-section
     .container
