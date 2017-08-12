@@ -21,7 +21,8 @@ input, textarea {
     outline: none; }
 
 body {
-  min-width: 1170px; }
+  min-width: 1170px;
+  overflow-x: hidden; }
 
 .container {
   margin: 0 auto;
@@ -235,14 +236,10 @@ section.team-section .person {
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   align-content: center; }
-  section.team-section .person-left::before {
-    transform: matrix(1, -0.05, 0, 1.2, 0, 0); }
-  section.team-section .person-right::before {
-    transform: matrix(1, 0.05, 0, 1.2, 0, 0); }
-  section.team-section .person-left::before, section.team-section .person-right::before {
+  section.team-section .person::before {
     content: "";
     display: block;
     position: absolute;
@@ -250,6 +247,22 @@ section.team-section .person {
     height: 100%;
     z-index: 5;
     background-color: #f8f8f8; }
+  section.team-section .person::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: #BEBEBE; }
+  section.team-section .person-left::before {
+    transform: matrix(1, -0.05, 0, 1.2, 0, 0); }
+  section.team-section .person-left::after {
+    transform: matrix(1, -0.05, 0, 1.2, -200, 0); }
+  section.team-section .person-right::before {
+    transform: matrix(1, 0.05, 0, 1.2, 0, 0); }
+  section.team-section .person-right::after {
+    transform: matrix(1, 0.05, 0, 1.2, 200, 0); }
   section.team-section .person .person-name {
     color: #4f4f4f;
     font-family: "Geometria", serif; }
@@ -300,7 +313,9 @@ section.team-section .person {
 section.team-section .quote-spacing {
   height: 600px;
   background-size: cover;
-  background-position: center left; }
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-position; }
   section.team-section .quote-spacing .container {
     display: flex;
     flex-direction: column;
