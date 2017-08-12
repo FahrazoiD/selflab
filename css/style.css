@@ -30,8 +30,7 @@ body {
   box-sizing: border-box; }
 
 header {
-  position: relative;
-  z-index: -2; }
+  position: relative; }
   header .extra-element {
     position: absolute;
     display: block;
