@@ -147,10 +147,30 @@ header {
         width: 20%;
         text-align: center;
         letter-spacing: .5px;
+        position: relative;
         color: #fdfdfd;
         font-size: 16px;
         font-weight: bolder;
         font-variant: small-caps; }
+      header.main-header nav a::before {
+        content: "";
+        display: block;
+        width: 25%;
+        position: absolute;
+        left: 25%;
+        bottom: -2px;
+        border: 1px solid black; }
+      header.main-header nav a::after {
+        content: "";
+        display: block;
+        width: 25%;
+        position: absolute;
+        right: 25%;
+        bottom: -2px;
+        border: 1px solid red;
+        transition: all 1s; }
+      header.main-header nav a:hover {
+        width: 50%; }
     header.main-header .slogan {
       padding-top: 10%;
       max-width: 50%;
@@ -257,11 +277,13 @@ section.team-section .person {
   section.team-section .person-left::before {
     transform: matrix(1, -0.05, 0, 1.2, 0, 0); }
   section.team-section .person-left::after {
-    transform: matrix(1, -0.05, 0, 1.2, -200, 0); }
+    transform: matrix(1, -0.05, 0, 1.2, -200, 0);
+    box-shadow: -4px -1px 4px #4f4f4f; }
   section.team-section .person-right::before {
     transform: matrix(1, 0.05, 0, 1.2, 0, 0); }
   section.team-section .person-right::after {
-    transform: matrix(1, 0.05, 0, 1.2, 200, 0); }
+    transform: matrix(1, 0.05, 0, 1.2, 200, 0);
+    box-shadow: 4px -1px 4px #4f4f4f; }
   section.team-section .person .person-name {
     color: #4f4f4f;
     font-family: "Geometria", serif; }

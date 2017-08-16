@@ -171,12 +171,35 @@ header
           width: 20%
           text-align: center
           letter-spacing: .5px
-
+          position: relative
           color: $text-color-light
           font:
             size: 16px
             weight: bolder
             variant: small-caps
+
+        &::before
+          content: ""
+          display: block
+          width: 25%
+          position: absolute
+          left: 25%
+          bottom: -2px
+          border: 1px solid black
+        
+        &::after
+          content: ""
+          display: block
+          width: 25%
+          position: absolute
+          right: 25%
+          bottom: -2px
+          border: 1px solid red
+          transition: all 1s
+
+        &:hover
+          width: 50%
+          
 
     .slogan
       padding-top: 10%
@@ -308,12 +331,14 @@ section
           transform: matrix(1,-.05,0,1.2,0,0)
         &::after
           transform: matrix(1,-.05,0,1.2,-200,0)
+          box-shadow: -4px -1px 4px $bg-color-dark
 
       &-right
         &::before
           transform: matrix(1,.05,0,1.2,0,0)
         &::after
           transform: matrix(1,.05,0,1.2,200,0)
+          box-shadow: 4px -1px 4px $bg-color-dark
           
       .person-name
         color: $text-color-dark

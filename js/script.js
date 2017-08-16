@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  portflioSlide();
+ // portflioSlide();
   setSpecContent();
  // parallaxScroller();
 });
