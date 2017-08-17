@@ -321,7 +321,7 @@ section
         content: ""
         display: block
         position: absolute
-        width: 100%
+        width: 85%
         height: 100%
         z-index: 4
         background-color: $bg-color-semilight
@@ -337,8 +337,9 @@ section
         &::before
           transform: matrix(1,.05,0,1.2,0,0)
         &::after
-          transform: matrix(1,.05,0,1.2,200,0)
+          transform: matrix(1,.05,0,1.2,0,-10)
           box-shadow: 4px -1px 4px $bg-color-dark
+          right: 0
           
       .person-name
         color: $text-color-dark
@@ -750,3 +751,9 @@ footer
       a
         color: $text-color-light
         font-size: 24px
+
+@media screen and (orientation: portrait)
+  section
+    &.team-section
+      .quote-spacing
+        background-attachment: inherit

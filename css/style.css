@@ -270,7 +270,7 @@ section.team-section .person {
     content: "";
     display: block;
     position: absolute;
-    width: 100%;
+    width: 85%;
     height: 100%;
     z-index: 4;
     background-color: #BEBEBE; }
@@ -282,8 +282,9 @@ section.team-section .person {
   section.team-section .person-right::before {
     transform: matrix(1, 0.05, 0, 1.2, 0, 0); }
   section.team-section .person-right::after {
-    transform: matrix(1, 0.05, 0, 1.2, 200, 0);
-    box-shadow: 4px -1px 4px #4f4f4f; }
+    transform: matrix(1, 0.05, 0, 1.2, 0, -10);
+    box-shadow: 4px -1px 4px #4f4f4f;
+    right: 0; }
   section.team-section .person .person-name {
     color: #4f4f4f;
     font-family: "Geometria", serif; }
@@ -611,3 +612,7 @@ footer {
       footer .container .social-wrap a {
         color: #fdfdfd;
         font-size: 24px; }
+
+@media screen and (orientation: portrait) {
+  section.team-section .quote-spacing {
+    background-attachment: inherit; } }
