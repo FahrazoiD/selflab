@@ -152,25 +152,6 @@ header {
         font-size: 16px;
         font-weight: bolder;
         font-variant: small-caps; }
-      header.main-header nav a::before {
-        content: "";
-        display: block;
-        width: 25%;
-        position: absolute;
-        left: 25%;
-        bottom: -2px;
-        border: 1px solid black; }
-      header.main-header nav a::after {
-        content: "";
-        display: block;
-        width: 25%;
-        position: absolute;
-        right: 25%;
-        bottom: -2px;
-        border: 1px solid red;
-        transition: all 1s; }
-      header.main-header nav a:hover {
-        width: 50%; }
     header.main-header .slogan {
       padding-top: 10%;
       max-width: 50%;
